@@ -38,11 +38,8 @@ void pop()
     {
         head = head->next;
         temp->next = NULL;
+        free(temp);
     }
-    // else
-    // {
-    //     head = NULL;
-    // }
 }
 
 void display()
