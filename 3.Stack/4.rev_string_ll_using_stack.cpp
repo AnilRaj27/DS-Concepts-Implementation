@@ -60,20 +60,32 @@ int main()
         temp = temp->next;
     }
 
-    // while (!s1.empty())
-    // {
-    //     cout << s1.top()->data << " ";
-    //     s1.pop();
-    // }
+    head = NULL;
+    temp = head;
+    while (!s1.empty())
+    {
+        if (head == NULL)
+        {
+            head = s1.top();
+            temp = s1.top();
+        }
+        else
+        {
+            temp->next = s1.top();
+            temp = temp->next;
+        }
+        s1.pop();
+    }
+    if (temp != NULL)
+        temp->next = NULL;
 
-    // head = s1.top();
-    // temp = head;
-    // while (!s1.empty())
-    // {
-    //     temp->next = s1.top();
-    //     s1.pop();
-    //     temp = temp->next;
-    // }
+    Node *itr = head;
+    while (itr)
+    {
+        cout << itr->data << " ";
+        itr = itr->next;
+    }
+    cout << endl;
 
     return 0;
 }
