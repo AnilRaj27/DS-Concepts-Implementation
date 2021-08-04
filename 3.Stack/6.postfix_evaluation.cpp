@@ -5,9 +5,6 @@ int main()
 {
     string str = "23*54*+9-";
 
-    cout << int(str[0]) << endl;
-    cout << str[0] - '0' << endl;
-
     stack<int> s;
 
     for (int i = 0; i < str.size(); i++)
