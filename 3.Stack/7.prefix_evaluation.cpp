@@ -5,9 +5,9 @@ int main()
 {
 
     string str = "-+*23*549";
-
     stack<int> s;
 
+    // Easy approach traversal from back
     for (int i = str.size() - 1; i >= 0; i--)
     {
         if (int(str[i]) >= 48 && int(str[i]) <= 57)
