@@ -23,11 +23,8 @@ void enqueue(int num)
 {
     node *newnode = createNode(num);
 
-    if (head == NULL)
-    {
-        head = newnode;
-        last = newnode;
-    }
+    if (head == NULL && last == NULL)
+        head = last = newnode;
     else
     {
         last->next = newnode;
@@ -37,14 +34,14 @@ void enqueue(int num)
 
 void dequeue()
 {
-    if (head != NULL)
-    {
-        node *temp = head;
-        head = head->next;
-        delete temp;
-    }
-    else
+    node *temp = head;
+    if (head == NULL)
         cout << "Queue is empty" << endl;
+    else if (head == last)
+        head = last = NULL;
+    else
+        head = head->next;
+    delete temp;
 }
 
 void display()
