@@ -87,6 +87,10 @@ int main()
         case 3:
             display();
             break;
+        default:
+            cout << "Your Stack is: " << endl;
+            display();
+            exit(1);
         }
     }
 
