@@ -29,7 +29,7 @@ void insert(int num)
         TreeNode *temp = root;
         TreeNode *node = createNode(num);
 
-        while (temp->left || temp->right)
+        while (temp)
         {
             if (node->data < temp->data && temp->left)
                 temp = temp->left;
@@ -43,14 +43,21 @@ void insert(int num)
             temp->left = node;
         else
             temp->right = node;
-
-        delete temp;
     }
+}
+
+void inorder(TreeNode *root)
+{
+    if (!root)
+        return;
+
+    inorder(root->left);
+    cout << root->data << " ";
+    inorder(root->right);
 }
 
 int main()
 {
-    // root = createNode(6);
 
     cout << "Perform Operations in the Tree: " << endl;
     cout << "1.Insert\n2.Delete\n3.Print BST\n"
@@ -64,7 +71,7 @@ int main()
         switch (choice)
         {
         case 1:
-            cout << "Enter the number to push: "
+            cout << "Enter the number to Insert: "
                  << endl;
             int num;
             cin >> num;
@@ -76,11 +83,16 @@ int main()
             // remove(num);
             break;
         case 3:
-            // print_bst();
+            printf("\n");
+            cout << "Your Tree is: " << endl;
+            inorder(root);
+            printf("\n\n");
             break;
         default:
-            cout << "Your Stack is: " << endl;
-            // print_bst();
+            printf("\n");
+            cout << "Your Tree is: " << endl;
+            inorder(root);
+            printf("\n\n");
             exit(1);
         }
     }
