@@ -56,11 +56,22 @@ void inorder(TreeNode *root)
     inorder(root->right);
 }
 
+void search(TreeNode *root, int n)
+{
+    if (!root)
+        return;
+
+    search(root->left, n);
+    if (root->data == n)
+        cout << root->data << " ";
+    search(root->right, n);
+}
+
 int main()
 {
 
     cout << "Perform Operations in the Tree: " << endl;
-    cout << "1.Insert\n2.Delete\n3.Print BST\n"
+    cout << "1.Insert\n2.Delete\n3.Print BST\n4.Search\n"
          << endl;
 
     while (true)
@@ -86,6 +97,14 @@ int main()
             printf("\n");
             cout << "Your Tree is: " << endl;
             inorder(root);
+            printf("\n\n");
+            break;
+        case 4:
+            printf("\n");
+            cout << "Provide number to search: " << endl;
+            int n;
+            cin >> n;
+            search(root, n);
             printf("\n\n");
             break;
         default:
