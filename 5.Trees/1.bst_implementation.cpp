@@ -67,6 +67,11 @@ void search(TreeNode *root, int n)
     search(root->right, n);
 }
 
+void remove(TreeNode *root, int n)
+{
+    //TODO
+}
+
 int main()
 {
 
@@ -91,7 +96,7 @@ int main()
         case 2:
             int num1;
             cin >> num1;
-            // remove(num);
+            remove(root, num1);
             break;
         case 3:
             printf("\n");
