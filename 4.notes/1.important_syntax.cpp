@@ -62,5 +62,11 @@ int main()
     //initialize a boolean vector with true values.
     // vector<bool> v(5, true);
 
+    // find a key in map
+    // map<int, int> m;
+    // m[1] = 2;
+    // if (m.find(2) != m.end())
+    //     cout << "found" << endl;
+
     return 0;
 }
