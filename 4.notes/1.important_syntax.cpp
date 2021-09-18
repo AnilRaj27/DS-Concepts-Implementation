@@ -68,5 +68,9 @@ int main()
     // if (m.find(2) != m.end())
     //     cout << "found" << endl;
 
+    // insertion
+    // inserts 7 at i-th index
+    // vec.insert(vec.begin() + i, 7);
+
     return 0;
 }
