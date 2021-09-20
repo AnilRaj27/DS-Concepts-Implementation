@@ -72,5 +72,9 @@ int main()
     // inserts 7 at i-th index
     // vec.insert(vec.begin() + i, 7);
 
+    // vector insert multiple elements at a time
+    // vector<int> temp;
+    // temp.insert(temp.end(), {0, 1, 2});
+
     return 0;
 }
