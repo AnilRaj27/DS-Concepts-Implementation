@@ -76,6 +76,10 @@ int main()
     // vector<int> temp;
     // temp.insert(temp.end(), {0, 1, 2});
 
+    // find min element & location in a vector
+    // int min_num = *min_element(matrix[i].begin(), matrix[i].end());
+    // int loc = min_element(matrix[i].begin(), matrix[i].end()) - matrix[i].begin();
+
     // how-to-find-a-vector-in-a-2d-vectors-in-cpp
     // https: //stackoverflow.com/questions/25691398/how-to-find-a-vector-in-a-2d-vectors-in-c
 
