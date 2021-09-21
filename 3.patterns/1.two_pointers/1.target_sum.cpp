@@ -4,10 +4,10 @@ using namespace std;
 int main()
 {
 
-    vector<int> v = {1, 2, 3, 4, 6};
+    vector<int> v = {2, 7, 11, 15};
 
     //1. two pointer solution
-    int i = 0, j = v.size() - 1, target = 6;
+    int i = 0, j = v.size() - 1, target = 9;
     vector<int> ans = {-1, -1};
     while (i < j)
     {
@@ -30,16 +30,21 @@ int main()
     {
         int diff = target - v[i];
         if (m.find(diff) != m.end())
-        {
-            ans = {i, m[diff]};
-        }
+            ans = {v[i], diff};
         else
-        {
-            m[v[i]] = i;
-        }
+            m[v[i]] = diff;
     }
 
-    cout << "Locations: " << ans[0] << " " << ans[1] << endl;
+    vector<int> res;
+    for (int i = 0; i < v.size(); i++)
+    {
+        if (ans[0] == v[i])
+            res.push_back(i);
+        else if (ans[1] == v[i])
+            res.push_back(i);
+    }
+
+    cout << "Locations: " << res[0] << " " << res[1] << endl;
 
     return 0;
 }
