@@ -79,5 +79,16 @@ int main()
     // how-to-find-a-vector-in-a-2d-vectors-in-cpp
     // https: //stackoverflow.com/questions/25691398/how-to-find-a-vector-in-a-2d-vectors-in-c
 
+    // erase an element in a vector
+    // v.erase(v.begin() + 0);
+    // v.erase(v.begin() + 0, v.begin() + 2);
+    // erase with iterator
+    // vector<int>::iterator it;
+    // it = myvector.begin();
+    // myvector.erase(it);
+
+    // vector becomes empty
+    // myvector.clear();
+
     return 0;
 }
