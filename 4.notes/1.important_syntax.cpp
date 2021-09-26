@@ -94,5 +94,9 @@ int main()
     // vector becomes empty
     // myvector.clear();
 
+    // Declare a 2D vector
+    // vector<int> col(3);
+    // vector<vector<int>> array(2, col);
+
     return 0;
 }
