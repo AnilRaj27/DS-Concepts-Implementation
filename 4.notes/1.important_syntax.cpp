@@ -98,5 +98,9 @@ int main()
     // vector<int> col(3);
     // vector<vector<int>> array(2, col);
 
+    // find an elemet in vector
+    //  vector<vector<int>> matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    // bool x = find(matrix[1].begin(), matrix[1].end(), 0) != matrix[1].end();
+
     return 0;
 }
