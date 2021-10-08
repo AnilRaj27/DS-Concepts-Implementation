@@ -4,8 +4,7 @@ using namespace std;
 int main()
 {
 
-    int n = 18;
-    cout << n / 10 << endl;
+    queue<int> q;
 
     // for (auto i : matrix)
     // {
